@@ -1,0 +1,18 @@
+def generate_sequence(n):
+    sequence = ""
+    current_number = 1
+
+    # Keep appending numbers to the sequence until it has at least n digits
+    while len(sequence) < n:
+        sequence += str(current_number)
+        current_number += 1
+
+    # Return the first n digits
+    return sequence[:n]
+
+# Take input from the user
+n = int(input("Enter the number of digits (n): "))
+
+# Generate and print the sequence
+result = generate_sequence(n)
+print(f"The first {n} digits of the sequence are: {result}")
